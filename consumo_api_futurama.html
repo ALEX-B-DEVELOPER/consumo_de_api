@@ -35,7 +35,7 @@
     async function getUsers() {
         console.log('inicio');
         try {
-            let res = await fetch("https://api.sampleapis.com/simpsons/characters");
+            let res = await fetch("https://api.sampleapis.com/futurama/characters");
             var response = await res.json()
 
             return await response;
@@ -67,7 +67,7 @@
             let htmlSegment = `<div class="col-sm-2">
                          <div class="tarjeta">
                             <img class="img-thumbnail image" src="${user.images.main}"/><br>
-                            <p>${user.name}  <br/>${user.sayings[3]}</p>
+                            <p>${user.name.first}  <br/>${user.sayings[3]}</p>
                             <a>${user.status}</a>  
                             </div>
                         </div>`;
